@@ -85,9 +85,12 @@ nav li {
   font-size: 1.2rem;
 }
 
-.action-options,
-.status {
+.action-options {
   margin-top: 1rem;
+}
+
+.status {
+  margin: 1rem 10rem;
 }
 
 .book-container button {

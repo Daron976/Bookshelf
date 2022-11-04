@@ -16,9 +16,6 @@ const Books = (props) => {
               <button type="button" id="edit" name="edit" className="action">Edit</button>
             </div>
           </div>
-          <div className="status">
-            <button type="button" id="update" name="update">Check Status</button>
-          </div>
         </li>
       </ul>
     </section>
