@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  min-height: 100vh;
+  background-color: #fafafa;
+}
+
+/* desktop */
+
+/* header */
+
+.header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 10rem;
+}
+
+.nav-holder {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav li {
+  list-style: none;
+}
+
+.nav-link {
+  display: flex;
+  gap: 3rem;
+  margin: 0;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #0290ff;
+}
+
+.user-details {
+  padding: 0.8rem;
+  background-color: #fafafa;
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+}
+
+.person {
+  color: #0290ff;
+}
+
+/* books */
+
+.book {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 7rem;
+  margin: 2rem 10rem;
+  padding: 2rem;
+  background: white;
+}
+
+.percentage {
+  font-size: 2rem;
+}
+
+.det-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.det-holder h1 {
+  font-size: 1.2rem;
+}
+
+.action-options {
+  margin-top: 1rem;
+}
+
+.status {
+  margin: 1rem 10rem;
+}
+
+.book-container button {
+  font-size: 1rem;
+}
+
+.author {
+  color: #4386bf;
+}
+
+#remove {
+  padding: 0 1rem;
+  border-left: 1px solid #b3b3b3;
+  border-right: 1px solid #b3b3b3;
+}
+
+.action {
+  background: none;
+  border: none;
+  margin-right: 1rem;
+  color: #4386bf;
+}
+
+#update,
+#add {
+  padding: 0.5rem 1rem;
+  background-color: #0290ff;
+  color: #e8e8e8;
+  border: none;
+}
+
+.pos-header {
+  font-size: 0.85rem;
+  opacity: 0.5;
+}
+
+.pos-details {
+  font-size: 1.2rem;
+}
+
+/* add book */
+
+.add-book {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 8rem;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.form-data {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.form-data input {
+  border: 1px solid #e8e8e8;
+  background-color: white;
+  padding: 0.75rem 1rem;
+}
