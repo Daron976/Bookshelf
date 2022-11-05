@@ -14,7 +14,7 @@ const Header = () => (
       </nav>
     </div>
     <div className='user-details'>
-      <i class="fa-solid fa-user person"></i>
+      <i className="fa-solid fa-user person"></i>
     </div>
     <Outlet />
   </header>
