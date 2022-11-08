@@ -4,18 +4,21 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BookContainer from './components/bookContainer';
 import Header from './components/header';
 import Categories from './components/categories';
+import { Provider } from 'react-redux';
 
 class App extends React.PureComponent {
   render() {
     return (
       <div className="App">
-        <BrowserRouter>
-          <Header />
-          <Routes>
-            <Route path="/" element={<BookContainer />} />
-            <Route path="/categories" element={<Categories />} />
-          </Routes>
-        </BrowserRouter>
+        <Provider store={store}>
+          <BrowserRouter>
+            <Header />
+            <Routes>
+              <Route path="/" element={<BookContainer />} />
+              <Route path="/categories" element={<Categories />} />
+            </Routes>
+          </BrowserRouter>
+        </Provider>
       </div>
     );
   }
