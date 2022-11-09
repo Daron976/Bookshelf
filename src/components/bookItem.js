@@ -28,7 +28,6 @@ const Books = (props) => {
                 name="remove"
                 className="action"
                 onClick={() => {
-                  console.log('test');
                   dispatch(removeBook(id));
                 }}
               >
