@@ -1,13 +1,13 @@
+const defaultState = [];
+
 const CHECK_STATUS = 'Bookshlef/categories/CHECK_STATUS';
 
-const categoriesReducer = (state = [], action) => {
+const categoriesReducer = (state = defaultState, action) => {
   switch (action.type) {
     case CHECK_STATUS:
       return [
         ...state,
-        {
-          text: action.text,
-        },
+        action.text,
       ];
     default:
       return state;
