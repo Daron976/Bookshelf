@@ -4,13 +4,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BookContainer from './components/bookContainer';
 import Header from './components/header';
 import Categories from './components/categories';
-import { Provider } from 'react-redux';
 
 class App extends React.PureComponent {
   render() {
     return (
       <div className="App">
-        <Provider store={store}>
           <BrowserRouter>
             <Header />
             <Routes>
@@ -18,7 +16,6 @@ class App extends React.PureComponent {
               <Route path="/categories" element={<Categories />} />
             </Routes>
           </BrowserRouter>
-        </Provider>
       </div>
     );
   }

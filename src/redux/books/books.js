@@ -1,7 +1,25 @@
+const defaultState = [
+  {
+    id: 1,
+    title: 'The Hunger Games',
+    author: 'Suzanne Collins',
+  },
+  {
+    id: 2,
+    title: 'No Plan B',
+    author: 'Lee Child',
+  },
+  {
+    id: 3,
+    title: 'The Hunger Games',
+    author: 'Suzanne Collins',
+  },
+];
+
 const ADD_BOOK = 'Bookshlef/books/ADD_BOOK';
 const REMOVE_BOOK = 'Bookshlef/books/REMOVE_BOOK';
 
-const bookReducer = (state = [], action) => {
+const bookReducer = (state = defaultState, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [
@@ -13,10 +31,8 @@ const bookReducer = (state = [], action) => {
         },
       ];
     case REMOVE_BOOK:
-      return [
-        ...state
-          .filter((book) => (book.id !== book)),
-      ];
+      return state
+        .filter((book) => (book.id !== action.id));
     default:
       return state;
   }
