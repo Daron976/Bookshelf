@@ -10,6 +10,15 @@ const AddBook = () => {
 
   const [categoryValue, setCategoryValue] = useState('');
 
+  const dispatch = useDispatch();
+
+  const obj = {
+    item_id: uuidv4(),
+    title: titleValue,
+    author: authorValue,
+    category: categoryValue,
+  };
+
   const titleInput = (e) => {
     setTitleValue(e.target.value);
   };
@@ -22,14 +31,17 @@ const AddBook = () => {
     setAuthorValue(e.target.value);
   };
 
-  const dispatch = useDispatch();
-
-  const obj = {
-    item_id: uuidv4(),
-    title: titleValue,
-    author: authorValue,
-    category: categoryValue,
+  const initialValue = () => {
+    if ((titleValue === '') || (categoryValue === '') || (authorValue === '')) {
+      alert('All fields are required');
+    } else {
+      dispatch(postBookItem(obj));
+      setTitleValue('');
+      setAuthorValue('');
+      setCategoryValue('');
+    }
   };
+
   return (
     <section className="add-book">
       <h1>Add a new book</h1>
@@ -41,6 +53,7 @@ const AddBook = () => {
           onChange={titleInput}
           value={titleValue}
           placeholder="BookTitle"
+          required
         />
         <input
           type="text"
@@ -49,6 +62,7 @@ const AddBook = () => {
           onChange={authorInput}
           value={authorValue}
           placeholder="Author"
+          required
         />
         <input
           type="text"
@@ -57,10 +71,11 @@ const AddBook = () => {
           onChange={categoryInput}
           value={categoryValue}
           placeholder="Genre"
+          required
         />
         <button
           onClick={() => {
-            dispatch(postBookItem(obj));
+            initialValue();
           }}
           type="button"
           name="add"
