@@ -73,16 +73,18 @@ const AddBook = () => {
           placeholder="Genre"
           required
         />
-        <button
-          onClick={() => {
-            initialValue();
-          }}
-          type="button"
-          name="add"
-          id="add"
-        >
-          Add Book
-        </button>
+        <div className="btn-width">
+          <button
+            onClick={() => {
+              initialValue();
+            }}
+            type="button"
+            name="add"
+            id="add"
+          >
+            Add Book
+          </button>
+        </div>
       </form>
     </section>
   );

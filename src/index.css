@@ -19,7 +19,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 10rem;
+  padding: 2.313rem 6.25rem 0;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
 }
 
 .nav-holder {
@@ -35,6 +39,14 @@ a {
 
 nav li {
   list-style: none;
+}
+
+.categories {
+  opacity: 0.5;
+}
+
+.link-item {
+  font-size: 0.813rem;
 }
 
 .nav-link {
@@ -60,15 +72,21 @@ nav li {
 }
 
 /* books */
+.book-container {
+  margin-top: 8rem;
+}
 
 .book {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 7rem;
-  margin: 2rem 10rem;
+  display: grid;
+  grid-template-columns: 2.5fr 0.75fr 0.5fr 0.75fr;
+  margin: 2.313rem 6.25rem 0;
   padding: 2rem;
   background: white;
+  align-items: center;
+}
+
+.spinner-img {
+  width: 5rem;
 }
 
 .percentage {
@@ -90,7 +108,17 @@ nav li {
 }
 
 .status {
-  margin: 1rem 10rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 5rem;
+}
+
+.divider {
+  width: 0.125rem;
+  height: 4.375rem;
+  margin: 0 3.688rem 0 4.938rem;
+  background-color: #e8e8e8;
 }
 
 .book-container button {
@@ -99,6 +127,12 @@ nav li {
 
 .author {
   color: #4386bf;
+}
+
+.category {
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0, 0.5);
 }
 
 #remove {
@@ -114,21 +148,47 @@ nav li {
   color: #4386bf;
 }
 
+.status-details {
+  opacity: 0.5;
+}
+
 #update,
 #add {
   padding: 0.5rem 1rem;
   background-color: #0290ff;
   color: #e8e8e8;
   border: none;
+  border-radius: 3px;
+}
+
+#add {
+  padding: 0.75rem 1.5rem;
+}
+
+.position {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+#update {
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-family: 'Roboto Slab', serif;
 }
 
 .pos-header {
-  font-size: 0.85rem;
+  font-size: 0.813rem;
   opacity: 0.5;
+  font-weight: 300;
 }
 
 .pos-details {
-  font-size: 1.2rem;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: -0.4px;
+  opacity: 0.75;
 }
 
 /* add book */
@@ -136,19 +196,68 @@ nav li {
 .add-book {
   display: flex;
   flex-direction: column;
-  margin: 2rem 8rem;
-  padding: 2rem;
+  margin: 2.313rem 6.25rem 2rem;
   gap: 1.5rem;
+}
+
+.add-book h1 {
+  color: #888;
 }
 
 .form-data {
   display: grid;
-  grid-template-columns: 50% 20% 20% 10%;
+  grid-template-columns: 1.5fr 0.75fr 0.75fr 0.5fr;
   gap: 2.5rem;
+  grid-auto-flow: column;
 }
 
 .form-data input {
   border: 1px solid #e8e8e8;
   background-color: white;
   padding: 0.75rem 1rem;
+}
+
+/* mobile */
+
+@media only screen and (max-width: 768px) {
+  .header {
+    align-items: flex-start;
+    padding: 1rem 2rem;
+  }
+
+  .nav-holder {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-link {
+    gap: 1rem;
+  }
+
+  .book {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+    margin: 1rem 2rem;
+  }
+
+  .add-book {
+    align-items: center;
+    margin: 1rem 2rem;
+  }
+
+  .form-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .status {
+    margin: 0;
+  }
+
+  .divider {
+    display: none;
+  }
 }
