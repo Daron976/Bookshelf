@@ -25,7 +25,6 @@ body {
   z-index: 2;
   width: 100%;
   box-shadow: 0 8px 6px -5px rgb(143, 143, 143);
-
 }
 
 .nav-holder {
@@ -179,7 +178,7 @@ nav li {
 }
 
 .add-book h1 {
-  color: #888888
+  color: #888;
 }
 
 .form-data {
@@ -202,7 +201,7 @@ nav li {
     align-items: flex-start;
     padding: 1rem 2rem;
   }
-  
+
   .nav-holder {
     flex-direction: column;
     align-items: flex-start;
