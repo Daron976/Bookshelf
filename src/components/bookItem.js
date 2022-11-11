@@ -47,9 +47,10 @@ const Books = (props) => {
         <img src={spinner} alt="progression circle" className="spinner-img" />
         <div>
           <p className="percentage">0%</p>
-          <p className="status-details">Incomplete</p>
+          <p className="status-details">Completed</p>
         </div>
       </div>
+      <div className="divider" />
       <section className="position">
         <h2 className="pos-header">CURRENT CHAPTER</h2>
         <p className="pos-details">Chapter 1</p>

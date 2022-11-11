@@ -24,7 +24,6 @@ body {
   top: 0;
   z-index: 2;
   width: 100%;
-  box-shadow: 0 8px 6px -5px rgb(143, 143, 143);
 }
 
 .nav-holder {
@@ -40,6 +39,14 @@ a {
 
 nav li {
   list-style: none;
+}
+
+.categories {
+  opacity: 0.5;
+}
+
+.link-item {
+  font-size: 0.813rem;
 }
 
 .nav-link {
@@ -71,11 +78,11 @@ nav li {
 
 .book {
   display: grid;
-  grid-template-columns: 2.5fr 0.75fr 0.75fr;
-  gap: 5rem;
+  grid-template-columns: 2.5fr 0.75fr 0.5fr 0.75fr;
   margin: 2.313rem 6.25rem 0;
   padding: 2rem;
   background: white;
+  align-items: center;
 }
 
 .spinner-img {
@@ -104,6 +111,14 @@ nav li {
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-left: 5rem;
+}
+
+.divider {
+  width: 0.125rem;
+  height: 4.375rem;
+  margin: 0 3.688rem 0 4.938rem;
+  background-color: #e8e8e8;
 }
 
 .book-container button {
@@ -133,12 +148,17 @@ nav li {
   color: #4386bf;
 }
 
+.status-details {
+  opacity: 0.5;
+}
+
 #update,
 #add {
   padding: 0.5rem 1rem;
   background-color: #0290ff;
   color: #e8e8e8;
   border: none;
+  border-radius: 3px;
 }
 
 #add {
@@ -155,6 +175,7 @@ nav li {
 #update {
   font-size: 0.813rem;
   font-weight: 300;
+  font-family: 'Roboto Slab', serif;
 }
 
 .pos-header {
@@ -164,8 +185,10 @@ nav li {
 }
 
 .pos-details {
-  font-size: 1rem;
   font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: -0.4px;
+  opacity: 0.75;
 }
 
 /* add book */
@@ -228,5 +251,13 @@ nav li {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .status {
+    margin: 0;
+  }
+
+  .divider {
+    display: none;
   }
 }

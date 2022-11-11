@@ -9,8 +9,8 @@ const Header = () => {
         <p className="logo"><strong>Bookstore CMS</strong></p>
         <nav>
           <ul className="nav-link">
-            <li className="link-item" id="books" data-testid="books"><Link to="/">Books</Link></li>
-            <li className="link-item"><Link to="/categories">Categories</Link></li>
+            <li className="link-item" id="books" data-testid="books"><Link to="/">BOOKS</Link></li>
+            <li className="link-item categories"><Link to="/categories">CATEGORIES</Link></li>
           </ul>
         </nav>
       </div>
