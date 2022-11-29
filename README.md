@@ -1,6 +1,6 @@
 # Bookshelf
 
-> In this project, I use a react web application to create a single-page app for a Bookstore
+> In this project, I use a react web application to create a single-page app for a Bookshelf that enable users to add remove books
 
 
 ## Built With
