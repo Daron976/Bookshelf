@@ -33,7 +33,7 @@ const AddBook = () => {
 
   const initialValue = () => {
     if ((titleValue === '') || (categoryValue === '') || (authorValue === '')) {
-      alert('All fields are required');
+      alert('All fields are required'); //eslint-disable-line
     } else {
       dispatch(postBookItem(obj));
       setTitleValue('');
