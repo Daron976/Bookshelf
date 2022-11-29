@@ -108,7 +108,10 @@ nav li {
 }
 
 .status {
+  margin-top: 10rem;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
   margin-left: 5rem;
@@ -254,7 +257,7 @@ nav li {
   }
 
   .status {
-    margin: 0;
+    align-items: flex-start;
   }
 
   .divider {
