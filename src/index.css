@@ -108,13 +108,16 @@ nav li {
 }
 
 .status {
-  margin-top: 10rem;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 1rem;
   margin-left: 5rem;
+}
+
+.status-categories {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
 }
 
 .divider {
@@ -257,7 +260,7 @@ nav li {
   }
 
   .status {
-    align-items: flex-start;
+    margin: 0;
   }
 
   .divider {
