@@ -6,7 +6,7 @@ const Categories = () => {
   const categories = useSelector((state) => state.categoriesReducer);
   const dispatch = useDispatch();
   return (
-    <div className="status">
+    <div className="status-categories">
       <div>
         {categories.map((category) => (
           <p key={category}>
